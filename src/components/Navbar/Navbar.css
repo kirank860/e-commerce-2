@@ -74,3 +74,40 @@
 link {
   text-decoration: none;
 }
+
+@media (max-width: 1280px) {
+  .navbar {
+    padding: 16px 50px;
+  }
+  .navbar__logo img {
+    width: 40px;
+  }
+  .navbar__logo p {
+    font-size: 26px;
+  }
+  .nav-menu {
+    gap: 30px;
+    font-size: 16px;
+  }
+  .nav-login-cart {
+    gap: 30px;
+  }
+  .nav-login-cart button {
+    width: 120px;
+    height: 45px;
+    font-size: 16px;
+  }
+  .nav-cart-count {
+    margin-left: -40px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 12px 30px;
+  }
+  .nav-menu {
+    gap: 25px;
+    font-size: 15px;
+  }
+}
