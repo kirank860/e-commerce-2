@@ -3,6 +3,7 @@
   justify-content: space-around;
   padding: 16px;
   box-shadow: 1px 0px 1px 0px rgba(0, 0, 0, 0.75);
+  align-items: center;
 }
 .navbar__logo {
   display: flex;
@@ -74,7 +75,9 @@
 link {
   text-decoration: none;
 }
-
+.nav-dropdown {
+  display: none;
+}
 @media (max-width: 1280px) {
   .navbar {
     padding: 16px 50px;
@@ -109,5 +112,59 @@ link {
   .nav-menu {
     gap: 25px;
     font-size: 15px;
+  }
+  .nav-login-cart button {
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+  }
+  .nav-login-cart img {
+    width: 30px;
+  }
+  .nav-cart-count {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media (max-width: 800px) {
+  .navbar {
+    padding: 10px 0px;
+  }
+  .nav-dropdown {
+    display: block;
+    width: 30px;
+    rotate: -90deg;
+    transition: 0.5s;
+  }
+  .nav-menu {
+    display: none;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+    top: 50px;
+    background-color: #fff;
+  }
+  .nav-menu-visible {
+    display: flex;
+  }
+  .nav-dropdown.open {
+    transform: rotate(90deg);
+  }
+}
+@media (max-width: 500px) {
+  .navbar {
+    padding: 8px 0px;
+    gap: 0;
+  }
+  .navbar__logo {
+    transform: scale(0.8);
+  }
+  .nav-menu {
+    height: 70px;
+    top: 50px;
+  }
+  .nav-login-cart {
+    transform: scale(0.8);
   }
 }
